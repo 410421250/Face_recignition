@@ -26,7 +26,7 @@ y_one_hot = []
 
 #s22_02
 n=0
-for filename in os.listdir("..\Face Database"):
+for filename in os.listdir(r"..\Face Database"):
     if(filename[0] == 's'):
         test = Image.open(filename)
         
