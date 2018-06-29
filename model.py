@@ -28,9 +28,12 @@ y_one_hot = []
 
 #s22_02
 n=0
-for filename in os.listdir(r"..\Face Database"):
+path=r".\Face Database"
+#print(os.listdir(path))
+
+for filename in os.listdir(path):
     if(filename[0] == 's'):
-        test = Image.open(filename)
+        test = Image.open(path+'\\'+filename)
         
         num = int(filename[1]) * 10 + int(filename[2]) 
         matrix = np.array(test) / 255
@@ -114,7 +117,7 @@ train_history = model.fit(x_data,x_label,
           shuffle=True,
           validation_data=(y_data,y_label))
 
-model.save(r'..\model.h5')
+model.save(r'.\model.h5')
 
 score = model.evaluate(y_data,y_label,verbose=1)
 print('Test loss:', score[0])
