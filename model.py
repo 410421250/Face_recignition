@@ -4,10 +4,10 @@ Created on Fri Jun 29 15:30:28 2018
 
 @author: Administrator
 """
-'''
+
 import win_unicode_console
 win_unicode_console.enable()
-'''
+
 
 from PIL import Image
 import os
@@ -114,7 +114,7 @@ train_history = model.fit(x_data,x_label,
           shuffle=True,
           validation_data=(y_data,y_label))
 
-model.save('model.h5')
+model.save(r'..\model.h5')
 
 score = model.evaluate(y_data,y_label,verbose=1)
 print('Test loss:', score[0])
