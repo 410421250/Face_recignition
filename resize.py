@@ -8,9 +8,11 @@ Created on Fri Jun 29 15:30:28 2018
 from PIL import Image
 import os
 
-for filename in os.listdir(r"C:\Users\biglk\Downloads\Face Database"):
+path = r"./Face Database"
+
+for filename in os.listdir(path):
     if(filename[0] == 's'):
-        test = Image.open(filename)
+        test = Image.open(path+'\\'+filename)
         test = test.resize((180,240),Image.BILINEAR)
         test.save(filename)
     
