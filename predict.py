@@ -17,6 +17,7 @@ import operator
 model = load_model('model_no_valid.h5')
 model.summary()
 
+#path=r".\testData"
 path=r".\Face Database"
 
 for filename in os.listdir(path):
@@ -44,6 +45,9 @@ for filename in os.listdir(path):
             print(str(topf[0])+' Possibility: %0.8f' %(topf[1]))
             if count >= 5:
                 break
+        
+        if(sorted_result_dict[0][0]!=Ans):
+            pause=input()
         
         
         
