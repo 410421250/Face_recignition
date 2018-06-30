@@ -5,13 +5,16 @@ Created on Fri Jun 29 15:30:28 2018
 @author: Administrator
 """
 
+import win_unicode_console
+win_unicode_console.enable()
+
 from PIL import Image
 from keras.models import load_model
 import os
 import numpy as np
 import operator
 
-model = load_model('model.h5')
+model = load_model('model_no_valid.h5')
 model.summary()
 
 path=r".\Face Database"
