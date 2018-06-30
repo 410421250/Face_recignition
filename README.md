@@ -23,6 +23,38 @@
 * Same Padding
 * Crossentropy
 
+## (b)
+```
+model = Sequential()
+
+model.add(Conv2D(128, 3, activation="relu", input_shape=(240, 180, 3),padding='same'))
+model.add(Dropout(0.25))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(64, 3 , activation="relu",padding='same'))
+model.add(Dropout(0.25))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(32, 3, activation="relu",padding='same'))
+model.add(Dropout(0.25))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dense(51, activation='softmax'))
+model.summary()
+model.compile(loss=keras.losses.categorical_crossentropy,
+              optimizer=keras.optimizers.Adadelta(),
+              metrics=['accuracy'])
+
+train_history = model.fit(x_data,x_label,
+          batch_size=16,
+          epochs=20,
+          verbose=1,
+          shuffle=True,
+          validation_data=(y_data,y_label))
+```
+
 ## 訓練成果
 * 這是有另外隔出validation set的
 ![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/with_valid.jpg)
@@ -32,13 +64,6 @@
 
 ## 辨識成果
 ![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg)
-```
-model = Sequential()
-model.add(Dense(512, activation='relu', input_shape=(784,)))
-model.add(Dropout(0.2))
-model.add(Dense(512, activation='relu'))
-model.add(Dropout(0.2))
-model.add(Dense(num_classes, activation='softmax'))
-```
+
 
 
