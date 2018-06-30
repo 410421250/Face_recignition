@@ -18,3 +18,8 @@
 * Same Padding
 * Crossentropy
 
+## 訓練成果
+* 這是有另外隔出validation set的
+
+* 後來想到要demo的時候助教已將2張圖片隔離所以想試試看不隔出validation set的話demo的時候可以到達什麼程度，也因此val_acc必定到達1
+
