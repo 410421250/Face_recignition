@@ -15,5 +15,4 @@ for filename in os.listdir(path):
     if(filename[0] == 's'):
         test = Image.open(path+'\\'+filename)
         test = test.resize((180,240),Image.BILINEAR)
-        test.save(filename)
-    
+        test.save(path+'\\'+filename)
