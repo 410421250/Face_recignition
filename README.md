@@ -32,5 +32,13 @@
 
 ## 辨識成果
 ![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg)
+```
+model = Sequential()
+model.add(Dense(512, activation='relu', input_shape=(784,)))
+model.add(Dropout(0.2))
+model.add(Dense(512, activation='relu'))
+model.add(Dropout(0.2))
+model.add(Dense(num_classes, activation='softmax'))
+```
 
 
