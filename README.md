@@ -96,7 +96,7 @@ for filename in os.listdir(path):
 
 ## (c)how we test our recognizer to evaluate its recognition rate
 
-1. 隨機在1~4,6~8,10~15之間取兩個數字。
+1. 隨機在1/~4,6/~8,10/~15之間取兩個數字。
 2. 將那兩個數字的圖片抽出當作validation set，以測試辨識率。
 3. 將全部13x50張照片丟入model訓練，觀察辨識率。
 4. 將訓練好的model載入，並將照片丟入model，觀察結果。
