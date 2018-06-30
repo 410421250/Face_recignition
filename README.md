@@ -128,7 +128,7 @@ for filename in os.listdir(path):
 ![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg)
 
 ## (g)心得感想
-* 蕭子渝:
+* 蕭子渝:原先專題就是用類似的技術，所以整體來說技術上沒有太大的困難，真要說的話只有發現照片大小不一的reshape和資料預處理的部分需要查一下，最後就是model的形狀，層數和一些參數的選擇比較花時間而已。最後demo的成果雖然沒有到心中的目標95%，不過還可以接受。
 * 黃英聰:
 * 王泰翔:
 
