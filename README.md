@@ -54,6 +54,7 @@ train_history = model.fit(x_data,x_label,
           shuffle=True,
           validation_data=(y_data,y_label))
 ```
+上面是我們使用的model。  
 ```
 for filename in os.listdir(path):
     if(filename[0] == 's'):
@@ -90,13 +91,9 @@ for filename in os.listdir(path):
             x_train.append(matrix)
             x_one_hot.append(num)
         '''
-  
-x_data = np.array(x_train)
-x_label = np.array(x_one_hot)          
-
-y_data = np.array(y_test)
-y_label = np.array(y_one_hot)
 ```
+
+
 
 ## (c)how we test our recognizer to evaluate its recognition rate
 
