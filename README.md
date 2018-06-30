@@ -1,7 +1,7 @@
 [valid]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/with_valid.jpg
 [novalid]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/no_valid.jpg
 [correct]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg
-[incorrect]:
+[incorrect]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/incorrect.jpg
 
 
 # Specifications of the Face Recognizer System
