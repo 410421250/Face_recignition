@@ -20,6 +20,7 @@
 
 ## 訓練成果
 * 這是有另外隔出validation set的
+![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/with_valid.jpg)
 
 * 後來想到要demo的時候助教已將2張圖片隔離所以想試試看不隔出validation set的話demo的時候可以到達什麼程度，也因此val_acc必定到達1
 ![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/no_valid.jpg)
