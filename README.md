@@ -102,10 +102,20 @@ for filename in os.listdir(path):
 4. 將訓練好的model載入，並將照片丟入model，觀察結果。
 
 ## (d)the problems suffered in our development
-* model不知道該用甚麼形狀，慢慢測試後才決定用現在的model。
+* model不知道該用甚麼形狀(層數、filter數量、是否Dropout等等)，將每一種形狀都訓練一次，慢慢測試後才決定用現在的model。
 * optimizer測試過Adam,RMSProp,Adadelta後差別不大，最後決定用Adadelta。
 * batch size最初是使用128，但GPU無法承受，但用1正確率非常慘，最後決定用16。
 * 資料預處理的時候，最初是將後兩張(編號14,15)當作validation set，其他11張當作train data訓練。後來突發奇想，改成隨機抽取兩張當作validation set，正確率並沒有提升。後來想到將demo時要測試的2x50張照片當作validation set，剩下的全部當作training data，所以就將全部13x50張照片丟入model訓練。(所以每個階段的model各有一個，總共三個model，demo時所使用的是最後一個no_valid_model.h5)
+
+## (e)分工方式
+
+* 蕭子渝:思考資料預處理的方式，model的雛型，model形狀的發想，照片統一大小。
+* 黃英聰:model形狀的實作，資料預處理後續實作，程式優化及debug。
+* 王泰翔:model的雛形，辨識程式的實作，資料預處理初步架構。
+
+## (f)特殊功能
+
+* 在測試時，當預測出的答案和正確答案不同時，會要求input當作暫停。(但不包含最高可能性前五個中的後4個)
 
 ## 訓練成果
 * 這是有另外隔出validation set的
