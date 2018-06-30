@@ -92,11 +92,14 @@ for filename in os.listdir(path):
             x_one_hot.append(num)
         '''
 ```
-
-
+這部分是資料預處理，因為原資料庫是一個人15張照片，已經有兩張被抽取起來做demo時使用，所以就將剩餘的13張全數丟入model訓練。
 
 ## (c)how we test our recognizer to evaluate its recognition rate
 
+1. 隨機在1~4,6~8,10~15之間取兩個數字。
+2. 將那兩個數字的圖片抽出當作validation set，以測試辨識率。
+3. 將全部13x50張照片丟入model訓練，觀察辨識率。
+4. 將訓練好的model載入，並將照片丟入model，觀察結果。
 
 ## 訓練成果
 * 這是有另外隔出validation set的
