@@ -47,8 +47,4 @@ for filename in os.listdir(path):
                 break
         
         if(sorted_result_dict[0][0]!=Ans):
-            pause=input()
-        
-        
-        
-    
+            pause=input('\nCheck next one')
