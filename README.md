@@ -127,5 +127,9 @@ for filename in os.listdir(path):
 ## 辨識成果
 ![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg)
 
+## (g)心得感想
+* 蕭子渝:
+* 黃英聰:
+* 王泰翔:
 
 
