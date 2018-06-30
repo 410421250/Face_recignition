@@ -1,6 +1,6 @@
 [valid]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/with_valid.jpg
 [novalid]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/no_valid.jpg
-[correct]:
+[correct]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg
 [incorrect]:
 
 
@@ -130,7 +130,7 @@ for filename in os.listdir(path):
 * 後來想到要demo的時候助教已將2張圖片隔離所以想試試看不隔出validation set的話demo的時候可以到達什麼程度，也因此val_loss非常的低
 ![novalid]
 ## 辨識成果
-![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg)
+***
 
 ## (g)心得感想
 * 蕭子渝:原先專題就是用類似的技術，所以整體來說技術上沒有太大的困難，真要說的話只有發現照片大小不一的reshape和資料預處理的部分需要查一下，最後就是model的形狀，層數和一些參數的選擇比較花時間而已。最後demo的成果雖然沒有到心中的目標95%，不過還可以接受。
