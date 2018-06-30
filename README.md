@@ -25,3 +25,5 @@
 * 後來想到要demo的時候助教已將2張圖片隔離所以想試試看不隔出validation set的話demo的時候可以到達什麼程度，也因此val_acc必定到達1
 ![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/no_valid.jpg)
 
+## 辨識成果
+![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg)
