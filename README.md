@@ -1,4 +1,4 @@
 # Specifications of the Face Recognizer System
 
-* 透過深度學習訓練一個基本的人臉辨識系統 *
- 使用Keras
+## 透過深度學習訓練一個基本的人臉辨識系統 
+
