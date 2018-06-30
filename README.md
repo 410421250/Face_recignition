@@ -1,7 +1,12 @@
 # Specifications of the Face Recognizer System
 * 透過深度學習訓練一個基本的人臉辨識系統 
 
-## 訓練相關使用
+## 組員
+* 410421250 王泰翔
+* 410421216 蕭子渝
+* 410421230 黃英聰
+
+## (a)訓練相關使用
 * 語言 - Python
 * 工具 - Keras , PIL
 * 神經網路結構 - CNN 
@@ -27,3 +32,5 @@
 
 ## 辨識成果
 ![image](https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg)
+
+
