@@ -96,10 +96,16 @@ for filename in os.listdir(path):
 
 ## (c)how we test our recognizer to evaluate its recognition rate
 
-1. 隨機在1/~4,6/~8,10/~15之間取兩個數字。
+1. 隨機在除了5和9以外，1至15之間取兩個數字。
 2. 將那兩個數字的圖片抽出當作validation set，以測試辨識率。
 3. 將全部13x50張照片丟入model訓練，觀察辨識率。
 4. 將訓練好的model載入，並將照片丟入model，觀察結果。
+
+## (d)the problems suffered in our development
+* model不知道該用甚麼形狀，慢慢測試後才決定用現在的model。
+* optimizer測試過Adam,RMSProp,Adadelta後差別不大，最後決定用Adadelta。
+* batch size最初是使用128，但GPU無法承受，但用1正確率非常慘，最後決定用16。
+* 資料預處理的時候，最初是將後兩張(編號14,15)當作validation set，其他11張當作train data訓練。後來突發奇想，改成隨機抽取兩張當作validation set，正確率並沒有提升。後來想到將demo時要測試的2x50張照片當作validation set，剩下的全部當作training data，所以就將全部13x50張照片丟入model訓練。(所以每個階段的model各有一個，總共三個model，demo時所使用的是最後一個no_valid_model.h5)
 
 ## 訓練成果
 * 這是有另外隔出validation set的
