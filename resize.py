@@ -9,6 +9,7 @@ from PIL import Image
 import os
 
 path = r"./Face Database"
+#path = r"./testData"
 
 for filename in os.listdir(path):
     if(filename[0] == 's'):
