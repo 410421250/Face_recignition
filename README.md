@@ -1,7 +1,7 @@
 [valid]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/with_valid.jpg
 [novalid]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/no_valid.jpg
 [correct]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/perform.jpg
-[incorrect]:
+[incorrect]:https://github.com/410421250/Face_recignition/blob/master/Performance%20Image/incorrect.jpg
 
 
 # Specifications of the Face Recognizer System
@@ -111,7 +111,7 @@ for filename in os.listdir(path):
 * model不知道該用甚麼形狀(層數、filter數量、是否Dropout等等)，將每一種形狀都訓練一次，慢慢測試後才決定用現在的model。
 * optimizer測試過Adam,RMSProp,Adadelta後差別不大，最後決定用Adadelta。
 * batch size最初是使用128，但GPU無法承受，但用1正確率非常慘，最後決定用16。
-* 資料預處理的時候，最初是將後兩張(編號14,15)當作validation set，其他11張當作train data訓練。後來突發奇想，改成隨機抽取兩張當作validation set，正確率並沒有提升。後來想到將demo時要測試的2x50張照片當作validation set，剩下的全部當作training data，所以就將全部13x50張照片丟入model訓練。(所以每個階段的model各有一個，總共三個model，demo時所使用的是最後一個no_valid_model.h5)
+* 資料預處理的時候，最初是將後兩張(編號14,15)當作validation set，其他11張當作train data訓練。後來突發奇想，改成隨機抽取兩張當作validation set，正確率並沒有提升。後來想到將demo時要測試的2x50張照片當作validation set，剩下的全部當作training data，所以就將全部13x50張照片丟入model訓練。(所以每個階段的model各有一個，總共三個model，demo時所使用的是最後一個model_no_valid.h5)
 
 ## (e)分工方式
 
@@ -136,8 +136,10 @@ for filename in os.listdir(path):
 |![correct]   |![incorrect] |
 
 ## (g)心得感想
-* 蕭子渝:原先專題就是用類似的技術，所以整體來說技術上沒有太大的困難，真要說的話只有發現照片大小不一的reshape和資料預處理的部分需要查一下，最後就是model的形狀，層數和一些參數的選擇比較花時間而已。最後demo的成果雖然沒有到心中的目標95%，不過還可以接受。
-* 黃英聰:
-* 王泰翔:
+* 蕭子渝：原先專題就是用類似的技術，所以整體來說技術上沒有太大的困難，真要說的話只有發現照片大小不一的reshape和資料預處理的部分需要查一下，最後就是model的形狀，層數和一些參數的選擇比較花時間而已。最後demo的成果雖然沒有到心中的目標95%，不過還可以接受。
+
+* 黃英聰：這次算是實際上第一次自己參與用深度學習實作的部分，專題時負責GUI讓我只懂深度學習的大概，透過這次實作讓我又有些收穫。不過有些東西還是不太懂。不過不管如何，看到開始有效學習及辨識成功的時候，真的感覺很棒。另外也透過這次比較了用CPU與GPU訓練所花費時間的差異，GPU不到1分鐘的時間，CPU卻要花上34分鐘多，顯卡有在做事讓我真的覺得顯卡很有價值。
+
+* 王泰翔：
 
 
