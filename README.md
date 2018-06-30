@@ -23,7 +23,7 @@
 * Same Padding
 * Crossentropy
 
-## (b)
+## (b)the modules enclosed in your recognizer and their functions
 ```
 model = Sequential()
 
@@ -54,6 +54,52 @@ train_history = model.fit(x_data,x_label,
           shuffle=True,
           validation_data=(y_data,y_label))
 ```
+```
+for filename in os.listdir(path):
+    if(filename[0] == 's'):
+        test = Image.open(path+'\\'+filename)
+        
+        num = int(filename[1]) * 10 + int(filename[2]) 
+        matrix = np.array(test) / 255
+        num_temp = int(filename[4]) * 10 + int(filename[5]) 
+        #print(matrix[0][0])
+        
+        if(n!=num):
+            n=num
+            random_list=[1,2,3,4,6,7,8,10,11,12,13,14,15]
+            random.shuffle(random_list)
+        if(num_temp==random_list[0] or num_temp==random_list[1]):
+            y_test.append(matrix)
+            y_one_hot.append(num)
+            
+        x_train.append(matrix)
+        x_one_hot.append(num)
+            
+        '''
+        else:
+            x_train.append(matrix)
+            x_one_hot.append(num)
+        '''
+            
+        '''
+        if(num_temp >= 14):
+            y_test.append(matrix)
+            y_one_hot.append(num)
+           
+        else:
+            x_train.append(matrix)
+            x_one_hot.append(num)
+        '''
+  
+x_data = np.array(x_train)
+x_label = np.array(x_one_hot)          
+
+y_data = np.array(y_test)
+y_label = np.array(y_one_hot)
+```
+
+## (c)how we test our recognizer to evaluate its recognition rate
+
 
 ## 訓練成果
 * 這是有另外隔出validation set的
