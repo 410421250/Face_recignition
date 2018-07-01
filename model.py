@@ -8,6 +8,7 @@ Created on Fri Jun 29 15:30:28 2018
 import win_unicode_console
 win_unicode_console.enable()
 
+import time
 
 from PIL import Image
 import os
