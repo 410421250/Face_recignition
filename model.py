@@ -8,8 +8,6 @@ Created on Fri Jun 29 15:30:28 2018
 import win_unicode_console
 win_unicode_console.enable()
 
-import time
-
 from PIL import Image
 import os
 import numpy as np
@@ -86,18 +84,13 @@ model.add(Conv2D(128, 3, activation="relu", input_shape=(240, 180, 3),padding='s
 model.add(Dropout(0.25))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
-
-
 model.add(Conv2D(64, 3 , activation="relu",padding='same'))
 model.add(Dropout(0.25))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
-
-
 model.add(Conv2D(32, 3, activation="relu",padding='same'))
 model.add(Dropout(0.25))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-
 
 model.add(Flatten())
 
