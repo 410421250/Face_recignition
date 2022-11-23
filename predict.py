@@ -35,7 +35,7 @@ for filename in os.listdir(path):
 
         print("\nPredict Answer:")
         print(sorted_result_dict[0][0])
-        print("\nCrrect Answer:")
+        print("\nCorrect Answer:")
         print(Ans)
 
         print('\nTop 5 candidate: ')
